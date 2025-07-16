@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="assets/logo.png" alt="Auto Report Logo" width="150"/>
+</p>
+
 # Auto Report
 
 A web-based dashboard for viewing and managing automation test results.  
