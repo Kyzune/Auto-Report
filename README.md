@@ -1,4 +1,4 @@
-<p align="left">
+<p>
   <img src="assets/logo.png" alt="Auto Report Logo" width="150"/>
 </p>
 
