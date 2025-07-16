@@ -28,7 +28,7 @@ automation-report/
 
 ## Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript
+- **Frontend**: HTML, CSS, JavaScript, Chart.js
 - **Backend**: Node.js, Express.js
 - **Database**: SQLite
 - **Test Automation**: Playwright
