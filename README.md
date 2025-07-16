@@ -10,10 +10,10 @@ This project helps visualize test execution details such as passed/failed/skippe
 ## Features
 
 - Summary of test results (Total, Passed, Failed, Skipped)
+- Informative Charts
 - Test detail view per row
 - Error messages, screenshots, and video playback
 - Clean and Fun UI using modern web design
-- Integrated with Playwright (or your preferred automation tool)
 - Document report generation (DOC format)
 
 ## Project Structure
