@@ -13,12 +13,14 @@ This project helps visualize test execution details such as passed/failed/skippe
 - Document report generation (DOC format)
 
 ## Project Structure
+```
 automation-report/
 |-api/ # Backend API (Express or similar)
 |-assets/ # Static assets
 |-exports/ # Temp report (After generating report)
 |-reports/ # Saving report files like screenshot, videos, etc
 |-views/ # Frontend HTML/CSS/JS files/folder
+```
 
 ## Tech Stack
 
