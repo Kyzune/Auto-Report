@@ -1,0 +1,21 @@
+{
+  "name": "auto-report",
+  "version": "1.0.0",
+  "description": "A web-based dashboard for viewing and managing automation test results.",
+  "scripts": {
+    "report": "concurrently \"cd api && node server.js\" \"live-server --open=views/html\""
+  },
+  "keywords": [],
+  "author": "Kyzune",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "concurrently": "^9.2.0",
+    "cors": "^2.8.5",
+    "docxtemplater": "^3.65.2",
+    "docxtemplater-image-module-free": "^1.1.1",
+    "express": "^5.1.0",
+    "live-server": "^1.2.2",
+    "pizzip": "^3.2.0"
+  }
+}

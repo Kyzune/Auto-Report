@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Automation Report | Detail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              comicSans: ['Comic Sans MS', 'cursive', 'sans-serif'],
+            },
+            colors: {
+              'sky-blue': {
+                  '50': '#ebfdff',
+                  '100': '#cdf7ff',
+                  '200': '#a1ecff',
+                  '300': '#55daff',
+                  '400': '#1ac3f6',
+                  '500': '#00a6dc',
+                  '600': '#0182b9',
+                  '700': '#096995',
+                  '800': '#115579',
+                  '900': '#134766',
+                  '950': '#062e46',
+              },
+              'alice-blue': {
+                  '50': '#f0f8ff',
+                  '100': '#e0f0fe',
+                  '200': '#bae2fd',
+                  '300': '#7dcbfc',
+                  '400': '#38b0f8',
+                  '500': '#0e96e9',
+                  '600': '#0277c7',
+                  '700': '#035ea1',
+                  '800': '#075185',
+                  '900': '#0c436e',
+                  '950': '#082b49',
+              },
+              'spring-green': {
+                  '50': '#eefff1',
+                  '100': '#d7ffdf',
+                  '200': '#b2ffc2',
+                  '300': '#55ff7a',
+                  '400': '#33f55e',
+                  '500': '#09de38',
+                  '600': '#01b82a',
+                  '700': '#059025',
+                  '800': '#0a7122',
+                  '900': '#0a5d1f',
+                  '950': '#00340d',
+              },
+              'carnation': {
+                  '50': '#fff1f1',
+                  '100': '#ffe1e1',
+                  '200': '#ffc7c7',
+                  '300': '#ffa0a0',
+                  '400': '#ff5555',
+                  '500': '#f83b3b',
+                  '600': '#e51d1d',
+                  '700': '#c11414',
+                  '800': '#a01414',
+                  '900': '#841818',
+                  '950': '#480707',
+              },
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .sidebar-collapsed {
+        width: 80px !important;
+      }
+    
+      .sidebar-collapsed .menu p,
+      .sidebar-collapsed .title {
+        display: none;
+      }
+    
+      .sidebar-collapsed .logo {
+        height: 40px;
+      }
+
+      .sidebar-collapsed .logo:hover{
+        background-color: rgba(255, 255, 255, 0.257);
+        height: 60px;
+      }
+
+      .sidebar-collapsed .hamburger {
+        display: none;
+      }
+
+      .detail-collapsed {
+        grid-template-columns: 80px 1fr !important;
+      }
+    
+      .opacity-100 {
+        opacity: 1;
+      }
+    
+      .opacity-0 {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body class="h-screen font-comicSans bg-alice-blue-50 text-gray-800">
+    <div class="grid grid-cols-[250px_1fr] grid-rows-[1fr] h-full transition-all duration-300 ease-in-out" id="detail">
+      <!-- Sidebar -->
+      <aside id="sidebar" class="bg-sky-blue-300 text-white p-4 flex flex-col justify-between transition-all duration-300 ease-in-out w-[250px] md:block">
+        <div class="flex justify-end">
+          <button onclick="sidebarCollapsed()" class="hamburger fixed text-white p-2 hover:bg-white/20 rounded-md transition-all duration-300">
+            <img src="../../assets/menus.png" alt="menus_icon" class="h-7">
+          </button>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+          <img src="../../assets/logo.png" alt="logo" onclick="sidebarCollapsed()" class="h-12 logo rounded-md transition-all duration-300" />
+          <h2 class="text-lg font-bold title transition-all duration-300">Automation Report</h2>
+        </div>
+      
+        <ul class="space-y-1 mt-20 menu transition-all duration-300">
+          <li class="p-2 hover:bg-white/20 rounded-lg">
+            <a href="index.html" class="block">
+              <div class="flex items-center gap-3">
+                <img src="../../assets/dashboard_icon.png" alt="dashboard_icon" class="h-6">
+                <p class="text-md">Dashboard</p>
+              </div>
+            </a>
+          </li>
+          <li class="p-2 bg-white/20 rounded-lg">
+            <a href="history.html" class="block">
+              <div class="flex items-center gap-3">
+                <img src="../../assets/history_icon.png" alt="dashboard_icon" class="h-6">
+                <p class="text-md">History</p>
+              </div>
+            </a>
+          </li>
+          <li class="p-2 hover:bg-white/20 rounded-lg">
+            <a href="report.html" class="block">
+              <div class="flex items-center gap-3">
+                <img src="../../assets/report_icon.png" alt="dashboard_icon" class="h-6">
+                <p class="text-md">Report</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="bg-alice-blue-50 p-6 overflow-auto transition-all duration-300">
+        <div class="mb-4">
+          <button onclick="history.back()" class="flex items-center gap-2 text-sm px-4 py-2 bg-alice-blue-50 transition-all duration-300 hover:bg-alice-blue-200 text-black shadow-lg shadow-gray-500/20 rounded">
+            <img src="../../assets/back_icon.png" alt="back_icon" class="h-8"> Kembali
+          </button>
+        </div>
+
+          <div class="mb-6">
+            <h1 class="text-2xl font-bold mb-2" id="test_id">#1</h1>
+            <div class="flex items-center justify-between">
+              <div class="flex gap-4 text-white">
+                <div class="bg-blue-500 px-4 py-2 rounded shadow-lg shadow-blue-500/30" id="total_indicator">Total: 0</div>
+                <div class="bg-spring-green-300 px-4 py-2 rounded shadow-lg shadow-spring-green-400/30" id="passed_indicator">Passed: 0</div>
+                <div class="bg-carnation-400 bg-red-500 px-4 py-2 rounded shadow-lg shadow-carnation-500/30" id="failed_indicator">Failed: 0</div>
+                <div class="bg-yellow-300 px-4 py-2 rounded shadow-lg shadow-yellow-500/30" id="skipped_indicator">Skipped: 0</div>
+              </div>
+              <div class="flex items-center gap-6 my-4">
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" id="expandAll" onchange="handleExpandAll()"> Expand All
+                </label>
+                <label class="flex items-center gap-2">
+                  <input type="checkbox" id="expandAllRow" onchange="handleExpandAllRow()"> Expand All Row
+                </label>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Card Row -->
+          <div id="card_row"></div>
+        
+          <!-- Image Preview Modal -->
+          <div id="imageModal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg shadow-md relative w-fit p-4 py-auto">
+              <button onclick="closeModal()" class="absolute -top-4 -right-4 p-3 rounded-full bg-gray-200 transition-all duration-300 hover:bg-alice-blue-200 z-60">
+                <img src="../../assets/close_icon.png" alt="close_icon" class="h-4">
+              </button>
+              <span id="imageFileName" class="font-semibold text-md text-black block mb-2">-</span>
+              <img id="previewImg" src="" alt="Screenshot" class="max-w-[1280px] max-h-[720px] rounded"/>
+            </div>
+          </div>
+        
+          <!-- Video Watch Modal -->
+          <div id="videoModal" class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
+            <div class="bg-white rounded-lg shadow-md relative max-w-xl w-full p-4 py-auto">
+              <button onclick="closeVideo()" class="absolute -top-4 -right-4 p-3 rounded-full bg-gray-200 transition-all duration-300 hover:bg-alice-blue-200 z-60">
+                <img src="../../assets/close_icon.png" alt="close_icon" class="h-4">
+              </button>
+
+              <span id="videoFileName" class="font-semibold text-md text-black">-</span>
+              <video id="videoPlayer" controls class="w-full max-h-[500px] rounded">
+                <source id="videoSource" src="" type="video/webm" />
+                Your browser does not support video playback.
+              </video>
+            </div>
+          </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="fixed bottom-0 w-full bg-gray-100 text-center text-sm text-gray-500 p-2 border-2 border-t-sky-blue-300 z-10">
+        &copy; <span class="font-bold">2025 Fikrah Inc.</span>
+      </footer>
+    </div>
+
+    <script src="../js/detail.js"></script>
+    <script>
+      // Sidebar toggle
+      const sidebar = document.getElementById("sidebar");
+      const detail = document.getElementById("detail");
+
+      function sidebarCollapsed() {
+        sidebar.classList.toggle("sidebar-collapsed");
+        detail.classList.toggle("detail-collapsed");
+      }
+    </script>
+  </body>
+</html>
